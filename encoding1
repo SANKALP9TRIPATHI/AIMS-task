@@ -1,1 +1,13 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    'Category': ['small', 'medium', 'large', 'medium', 'small', 'large']
+}
+
+df = pd.DataFrame(data)
+df_one_hot = pd.get_dummies(df, columns=['Category'], prefix='Category')
+df_one_hot = df_one_hot.astype(int)
+
+print(df_one_hot)
 
